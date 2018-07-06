@@ -1,0 +1,417 @@
+/**                                                         
+*  ,  ,          __               
+* /|_/   _      / ()  _,          
+*  |\   |/ |  ||     / |  /|/|/|  
+*  | \_/|_/ \/|/\___/\/|_/ | | |_/
+*            (|                   
+* 
+*   KeyCam v0.0 || KeyCam 2018 || The power of Proyects
+**/
+@font-face {
+	font-family: Ubuntu;
+    src: url("fonts/Ubuntu-C.ttf");
+}
+
+@font-face {
+	font-family: Raleway;
+    src: url("fonts/Raleway-Regular.ttf");
+}
+
+@font-face {
+	font-family: Raleway Light;
+    src: url("fonts/Raleway-Light.ttf");
+}
+
+@font-face {
+	font-family: Roboto;
+    src: url("fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+	font-family: Roboto Light;
+    src: url("fonts/Roboto-Light.ttf");
+}
+
+
+/*			GENERAL				*/
+#Center{
+	-fx-background-color: #ffffff;
+	-fx-spacing: 10;
+	-fx-padding: 10;
+}
+
+#Center > #pageTitle{
+	-fx-font-size: 30;
+	-fx-text-fill: #444444;
+	-fx-font-family: Raleway Light;
+	-fx-padding: 10 10 0 10;
+}
+
+#Center > #pageInfo{
+	-fx-font-size: 13;
+	-fx-text-fill: #444444;
+	-fx-font-family: Raleway;
+	-fx-padding: 0 15;
+}
+
+/*			MENU			*/
+#mainMenu{
+	-fx-background-color: #0060a5;
+	-fx-min-width: 80;
+	-fx-padding: 0;
+	-fx-alignment: top-center;
+}
+
+#mainMenu .button{
+	-fx-background-color: transparent;
+	-fx-text-fill: #fff;
+	-fx-background-radius: 0px;
+	-fx-pref-width: 80;
+}
+
+#mainMenu .button:hover {
+    -fx-background-color: #0d77c3;
+    -fx-text-fill: #fff;
+}
+
+#Home{
+	-fx-graphic: url('../images/menuIcons/whome24.png');
+}
+
+#Home:hover{
+	-fx-graphic: url('../images/menuIcons/whome24.png');
+}
+
+#About{
+	-fx-graphic: url('../images/menuIcons/wabout24.png');
+}
+
+#About:hover{
+	-fx-graphic: url('../images/menuIcons/wabout24.png');
+}
+
+#Camera{
+	-fx-graphic: url('../images/menuIcons/wcamera24.png');
+}
+
+#Camera:hover{
+	-fx-graphic: url('../images/menuIcons/wcamera24.png');
+}
+
+#Effects{
+	-fx-graphic: url('../images/menuIcons/weffects24.png');
+}
+
+#Effects:hover{
+	-fx-graphic: url('../images/menuIcons/weffects24.png');
+}
+
+#Keys{
+	-fx-graphic: url('../images/menuIcons/wkeys24.png');
+}
+
+#Keys:hover{
+	-fx-graphic: url('../images/menuIcons/wkeys24.png');
+}
+
+#Comparison{
+	-fx-graphic: url('../images/menuIcons/wcomparison24.png');
+}
+
+#Comparison:hover{
+	-fx-graphic: url('../images/menuIcons/wcomparison24.png');
+}
+
+/* Camera */
+#cameraView{
+
+}
+
+/* Keys */
+#keysView{
+
+}
+
+#keysTable > #tableTitleBox{
+	-fx-background-color: rgb(0, 162, 232);
+	-fx-padding: 20 20 10;
+	
+}
+
+#keysTable > #tableTitleBox > #tableTitle{
+	-fx-font-size: 24;
+	-fx-font-family: Roboto;
+	-fx-font-weight: bold;
+	-fx-text-fill: #fff;
+}
+
+#keysTable > #tableHeader{
+	-fx-background-color: rgb(243, 243, 243);
+	-fx-padding: 20 5 5;
+}
+
+#keysTable > #tableHeader > #ownerHeader{
+	-fx-pref-width: 300;
+}
+
+#keysTable > #tableHeader > #ownerHeader > #ownerHeaderTitle{
+	-fx-font-size: 14;
+	-fx-font-weight: 200;
+	-fx-font-family: Roboto;
+	-fx-text-fill: #000;
+}
+
+#keysTable > #tableHeader > #filenameHeader{
+	-fx-pref-width: 200;
+}
+
+#keysTable > #tableHeader > #filenameHeader > #filenameHeaderTitle{
+	-fx-font-size: 14;
+	-fx-font-weight: 100;
+	-fx-font-family: Roboto;
+	-fx-text-fill: #000;
+}
+
+#keysTable > #tableHeader > #actionHeader{
+	-fx-pref-width: 150;
+}
+
+#keysTable > #tableHeader > #actionHeader > #actionHeaderTitle{
+	-fx-font-size: 14;
+	-fx-font-weight: 200;
+	-fx-font-family: Roboto;
+	-fx-text-fill: #000;
+}
+
+#keysTable > #keyItem{
+	-fx-background-color: #fff;
+	-fx-padding: 20 5 5;
+}
+
+#keysTable > #keyItem:hover{
+	-fx-background-color: rgb(206, 240, 255);
+}
+
+#keysTable > #keyItem > #ownerField {
+	-fx-pref-width: 300;
+}
+
+#keysTable > #keyItem > #ownerField > #ownerFieldText {
+	-fx-font-size: 12;
+	-fx-font-weight: bolder;
+	-fx-font-family: Roboto;
+	-fx-text-fill: #000;
+}
+
+#keysTable > #keyItem > #filenameField {
+	-fx-pref-width: 200;
+}
+
+#keysTable > #keyItem > #filenameField > #filenameFieldText {
+	-fx-font-size: 12;
+	-fx-font-weight: 100;
+	-fx-font-family: Roboto;
+	-fx-text-fill: #000;
+}
+
+#keysTable > #keyItem > #actionsField {
+	-fx-pref-width: 150;
+	-fx-spacing: 10;
+}
+
+#keysTable > #keyItem > #actionsField > .button {
+	-fx-background-color: transparent;
+	-fx-text-fill: blue;
+}
+
+
+
+/* Effects */
+
+#finalBox{
+    -fx-spacing: 100;
+    -fx-alignment: top-center;
+    
+}
+
+#finalBox > #leftBox {
+    -fx-padding: 15;
+        
+    
+}
+#finalBox > #rightBox {
+    -fx-padding: 25;
+        
+    
+}
+
+#finalBox > #leftBox > #buttonsBox{
+    -fx-spacing: 15;
+    -fx-padding: 20 0;
+    
+}
+
+#finalBox > #leftBox > #buttonsBox > .button{
+	-fx-background-color: #607d8b;
+	-fx-border-color: #607d8b;
+    -fx-background-insets: 0,1,2;
+    -fx-background-radius: 0;
+    -fx-padding: 3 20 3 20;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-pref-width: 200
+}
+
+#finalBox > #rightBox > #resultKeyBox{
+	
+	-fx-alignment: top-center;
+	
+	
+}
+
+/* Analysis */
+#keySectionBox{
+	-fx-alignment: top-center;
+	-fx-spacing: 20;
+}
+
+#keySectionBox > #resultKeyBox, #myKeyBox{
+	-fx-padding: 20;
+	-fx-alignment: top-center;
+	-fx-spacing: 10;
+	
+}
+
+#myKeyBox > #loadmyKey{
+	-fx-background-color: #60a917;
+	-fx-border-color: #60a917;
+    -fx-background-insets: 0,1,2;
+    -fx-background-radius: 0;
+    -fx-padding: 3 20 3 20;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+}
+
+#myKeyBox > #loadmyKey:hover{
+	-fx-background-color: #477c11;
+	-fx-border-color: #2d4f0b;
+}
+
+#settingsBox{
+	-fx-alignment: top-center;
+}
+
+#settingsBox > #accuracySlider{
+	
+}
+
+#actionsBox{
+	-fx-alignment: top-center;
+}
+
+#actionsBox > #compareButton{
+	-fx-background-color: #607d8b;
+	-fx-border-color: #607d8b;
+    -fx-background-insets: 0,1,2;
+    -fx-background-radius: 0;
+    -fx-padding: 3 20 3 20;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;	
+}
+
+#actionsBox > #compareButton:hover{
+	-fx-background-color: #4b626d;
+	-fx-border-color: #36474f;
+}
+
+#myKeyTitle, #resultKeyTitle{
+	-fx-font-size: 16;
+	-fx-font-family: Segoe UI Light;
+}
+
+/* Accordion Metro */
+#accordionMetro{
+	-fx-skin: none;
+	-fx-text-fill: #fff;
+}
+
+#accordionMetro:focused {
+	-fx-text-fill: white;
+}
+
+#accordionMetro > .title {
+	-fx-font-size: 16;
+	-fx-font-family: Segoe UI Light;
+	-fx-background-color: rgb(58, 58, 58);
+	-fx-background-insets: 0;
+	-fx-background-radius: 0;
+	-fx-padding: 10 15;
+}
+
+#accordionMetro:focused > .title {
+	-fx-color: -fx-focus-color;
+}
+
+#accordionMetro > .title > .arrow-button {
+	-fx-background-color: null;
+	-fx-background-insets: 10 20 30 40;
+	-fx-background-radius: 0;
+	-fx-padding: 0 10; /* 0 3 0 0 */
+}
+
+#accordionMetro > .title > .arrow-button .arrow {
+	-fx-background-image: url('../images/icons/accordion-expanded.png');
+	-fx-background-repeat: no-repeat;
+	-fx-rotate: 0;
+	-fx-background-color: transparent;
+	-fx-background-insets: 0 0 0 0;
+	-fx-padding: 12;
+	-fx-shape: null;
+}
+
+#accordionMetro:collapsed > .title > .arrow-button .arrow {
+	-fx-background-image: url('../images/icons/accordion-collapsed.png');
+	-fx-background-repeat: no-repeat;
+	-fx-padding: 12;
+	-fx-rotate: 0;
+}
+
+/* Buttons */
+#SaveButton{
+	-fx-background-color: #60a917;
+	-fx-border-color: #60a917;
+    -fx-background-insets: 0,1,2;
+    -fx-background-radius: 0;
+    -fx-padding: 3 20 3 20;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+}
+
+#SaveButton:hover{
+	-fx-background-color: #477c11;
+	-fx-border-color: #2d4f0b;
+}
+
+#ActionButton{
+	-fx-background-color: #607d8b;
+	-fx-border-color: #607d8b;
+    -fx-background-insets: 0,1,2;
+    -fx-background-radius: 0;
+    -fx-padding: 3 20 3 20;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+}
+
+#ActionButton:hover{
+	-fx-background-color: #4b626d;
+	-fx-border-color: #36474f;
+}
+
+/*TEAM 1 CSS*/
+
+.Header{
+ -fx-background-color:linear-gradient(#FFC837,#FFA000);
+}
+.Side{
+ -fx-background-color:linear-gradient(#FFC830,#FFC837);
+}
